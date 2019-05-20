@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D9ECECEC"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:paddingTop="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerInside"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/vendor_name"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                tools:text="NANA OYLAMO Franck"
+                android:textColor="@color/light_black"
+                android:layout_toEndOf="@id/img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/date"
+                    android:hint="Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/amout"
+                    android:hint="Amount ₦"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shapebutton"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

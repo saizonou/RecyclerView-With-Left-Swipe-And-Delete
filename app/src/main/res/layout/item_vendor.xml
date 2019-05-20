@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gitplus.fanmilk.helper.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    app:dragFromEdge="left">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <RelativeLayout android:id="@+id/sale"
+                style="@style/vendor_action"
+                android:background="@drawable/blue_circle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_list" />
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/edit"
+                android:visibility="gone"
+                style="@style/vendor_action"
+                android:background="@drawable/orange_purple">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_edit" />
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/delete"
+                android:visibility="gone"
+                style="@style/vendor_action"
+                android:background="@drawable/red_circle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_delete" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/index" />
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black"
+                    tools:text="SAIZONOU Issa Melchior" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="054 905 7626" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#C62828"
+                    tools:text="N 678973" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+</com.gitplus.fanmilk.helper.SwipeRevealLayout>

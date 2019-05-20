@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">fanmilk</string>
+    <string name="net_error">Network Error</string>
+    <string name="json_erro">json error</string>
+    <string name="no_internet">No internet connection \n Please check your connection and try again</string>
+</resources>

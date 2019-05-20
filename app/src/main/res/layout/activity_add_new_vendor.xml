@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D9ECECEC"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_profile"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_dp"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_plus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/img_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_plus"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_below="@id/logo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/name"
+                    android:hint="Name"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputAddress"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/address"
+                    android:drawablePadding="5dp"
+                    android:hint="Address"
+                    android:drawableStart="@drawable/ic_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPhone"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/phone"
+                    android:inputType="phone"
+                    android:drawablePadding="5dp"
+                    android:hint="Phone"
+                    android:drawableStart="@drawable/ic_local_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/phone2"
+                    android:drawablePadding="5dp"
+                    android:hint="Phone 2"
+                    android:inputType="phone"
+                    android:drawableStart="@drawable/ic_local_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/email"
+                    android:inputType="textEmailAddress"
+                    android:drawablePadding="5dp"
+                    android:hint="Email"
+                    android:drawableStart="@drawable/ic_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shapebutton"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
